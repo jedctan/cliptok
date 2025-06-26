@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 django = "*"
+yt-dlp = "*"
 
 [dev-packages]
 

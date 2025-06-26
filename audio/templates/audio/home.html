@@ -1,0 +1,22 @@
+<h1>ClipTok</h1>
+
+<form method="POST">
+  {% csrf_token %}
+  <input type="text" name="url" placeholder="Paste TikTok URL here" required>
+  <button type="submit">Download Audio</button>
+</form>
+
+{% if error %}
+<p style="color: red;">{{ error }}</p>
+{% endif %}
+
+<ul>
+  {% for audio in audios %}
+    <li>
+      {{ audio.title }}<br>
+      <audio controls>
+        <source src="{{ audio.file.url }}" type="audio/mpeg">
+      </audio>
+    </li>
+  {% endfor %}
+</ul>
