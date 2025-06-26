@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Virtualenv
+venv/
+.env/
+*.env
+Pipfile.lock
+
+# Django
+db.sqlite3
+/media/
+*.log
+
+# VSCode or JetBrains
+.vscode/
+.idea/
